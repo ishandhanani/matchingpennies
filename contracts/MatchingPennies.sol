@@ -64,7 +64,7 @@ contract MatchingPennies {
         require(msg.sender == gamesPlayed[gameId].p1, "Only player1 can start the game");
         require(bytes(p1vote)[0] == "1" || bytes(p1vote)[0] == "0");
         require(keccak256(abi.encodePacked(p1vote)) == gamesPlayed[gameId].p1commitment, "Your vote does not match original commitment");
-        if (bytes(p1vote)[0] == "1" && gamesPlayed[gameId].p2choice == 1){
+        if ((bytes(p1vote)[0] == "1" && gamesPlayed[gameId].p2choice == 1) || (bytes(p1vote)[0] == "0" && gamesPlayed[gameId].p2choice == 0)){
             gamesPlayed[gameId].winner = msg.sender; //or currentGame.p1 depending on gas
             emit GameStatus(gameId, gamesPlayed[gameId].winner, "The game has ended. Player1 can now withdraw their winnings");
         }
