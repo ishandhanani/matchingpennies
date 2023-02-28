@@ -110,12 +110,12 @@ contract MatchingPennies {
    }
    
    /**
-      * @dev This function lets either player1 or player2 withdraw their stake if the game has not started
-      * Player1 can only withdraw their stake after 30 seconds and if Player2 has not joined
-      * Player2 can only withdraw thier stake if Player1 has not called `playGame`
-      * @param gameId The ID of the game to that was played.
-      * @notice If either player withdraws their stake, the game is set to complete and a new game must be started
-     */
+     * @dev This function lets either player1 or player2 withdraw their stake if the game has not started
+     * Player1 can only withdraw their stake after 30 seconds and if Player2 has not joined
+     * Player2 can only withdraw thier stake if Player1 has not called `playGame`
+     * @param gameId The ID of the game to that was played.
+     * @notice If either player withdraws their stake, the game is set to complete and a new game must be started
+    */
    function withdrawStake(uint8 gameId) public payable{
        //Game storage game = gamesPlayed[gameId];
        require(gamesPlayed[gameId].p1 != address(0), "No one is playing this game. Nothing to withdraw");
