@@ -6,9 +6,9 @@ To address the issue of simultanous actions in a smart contracts, I implemented 
 
 #### Built With
 
-Solidity 0.8.9
-JavaScript (ethers.js)
-HardHat
+ - Solidity 0.8.9
+ - JavaScript (ethers.js)
+ - HardHat
 
 #### Getting Started
 
