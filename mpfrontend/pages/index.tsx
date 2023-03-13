@@ -1,13 +1,19 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import type { NextPage } from 'next';
-import { ethers, contract } from "../utils/ethers"
+import { contract } from "../utils/ethers" //an ethers instance of contract with abi and address already in
+import { ethers } from 'ethers';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-
-
-
-
-
+import {
+  useAccount,
+  useConnect,
+  useContract,
+  useContractRead,
+  useContractWrite,
+  useNetwork,
+  useWaitForTransaction,
+} from "wagmi";
+import { useState, useEffect } from "react";
 
 const Home: NextPage = () => {
   return (

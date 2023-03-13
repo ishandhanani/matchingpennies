@@ -6,4 +6,4 @@ const abi = ABI;
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
 const contract = new ethers.Contract(address, abi, provider)
-export { ethers, contract };
+export { contract };
