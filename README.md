@@ -33,5 +33,4 @@ Deploy the smart contract
 2. Change the address in `index.js`
 
 Run the frontend through `npm run dev`
-#### Getting Started  
 
