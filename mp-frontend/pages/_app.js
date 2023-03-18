@@ -1,9 +1,8 @@
 import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider, midnightTheme } from '@rainbow-me/rainbowkit';
-import type { AppProps } from 'next/app';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
-import { arbitrum, goerli, hardhat, mainnet, optimism, polygon } from 'wagmi/chains';
+import { goerli, hardhat} from 'wagmi/chains'; //add more chains here
 import { publicProvider } from 'wagmi/providers/public';
 
 const { chains, provider, webSocketProvider } = configureChains(
@@ -16,7 +15,7 @@ const { chains, provider, webSocketProvider } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'RainbowKit App',
+  appName: 'Matching Pennies',
   chains,
 });
 
@@ -24,10 +23,9 @@ const wagmiClient = createClient({
   autoConnect: true,
   connectors,
   provider,
-  webSocketProvider,
 });
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains} theme={midnightTheme()}>

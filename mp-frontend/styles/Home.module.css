@@ -1,0 +1,91 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+/*Moving the wallet connection to the top right of the screen*/
+.walletConnect {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../public/coin.png");
+  background-repeat: repeat-x repeat-y;
+  background-position: top left;
+  background-size: 2.5%;
+}
+
+.content {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input{
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  border: none;
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.button {
+  padding: 5px;
+  font-size: 16px;
+  background-color: #4e4a08;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
